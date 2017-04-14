@@ -1,0 +1,118 @@
+Polymorphism mempunyai banyak bentuk yang juga merupakan salah satu sifat class yang memungkinkan sebuah method mempunyai
+nama yang sama, namun memiliki aksi yang berbeda.
+Polymorphism adalah pemikiran bahwa objek dinamis suatu class dasar dapat berprilaku seperti class turunan.
+
+
+public class Tanaman { // Super class Tanaman
+    String nama; // tipe data 
+    String warna; // tipe data
+    
+    public void nama(){ // membuat method nama
+        System.out.println("Nama Tanaman");// ini adalah nama yang digunakan oleh beberapa nama tanaman
+    }
+    
+    public void warna(){ // membuat method warna
+        System.out.println("Warna Tanaman"); // ini adalah yang digunakan oleh beberapa warna tanaman
+    }
+    
+
+}
+
+class Mawar extends Tanaman{ // sub class mawar
+
+    public void nama(){ // membuat method nama tanaman
+        System.out.println("Tanaman Mawar"); // untuk menampilkan pesan text nama tanaman
+    }                                        // pesan text berbeda dengan super class tanaman
+    
+    public void warna(){ // membuat method warna tanaman
+        System.out.println("Merah"); // untuk menampilkan pesan text warna
+        System.out.println("*****************");// menampilkan pesan text, berbeda dengan super class tanaman
+    }
+}
+
+class PutriMalu extends Tanaman{ // sub class PutriMalu
+
+    public void nama(){ // membuat method nama tanaman
+        System.out.println("Tanaman Putri Malu");// untuk menampilkan pesan text nama tanaman
+    }
+    
+    public void warna(){ // membuat method warna tanaman
+        System.out.println("Hijau"); // untuk menampilakan pesan text warna
+        System.out.println("*****************"); // menapilkan pesan text, berbeda dengan super class tanaman 
+    }                                            // dan sub class mawar
+    
+}
+
+class Anggrek extends Tanaman{ // sub class Anggrek
+
+    public void nama(){ // untuk menampilkan pesan text nama tanaman
+        System.out.println("Tanaman Anggrek");// untuk menampilakan pesan text nama tanaman
+    }
+    
+    public void warna(){ // membuat method warna tanaman
+        System.out.println("Ungu");// untuk menampilakan pesan text warna
+        System.out.println("***************");// menapilkan pesan text, berbeda dengan super class tanaman 
+                                              // dan sub class mawar,sub class putrimalu
+    }
+    
+}
+
+class Melati extends Tanaman{ // sub class Anggrek
+
+    public void nama(){ // untuk menampilkan pesan text nama tanaman
+        System.out.println("Tanaman Melati"); // untuk menampilakan pesan text nama tanaman
+    }
+    
+    public void warna(){ // membuat method warna tanaman
+        System.out.println("Putih");// untuk menampilakan pesan text warna
+        System.out.println("****************"); // menapilkan pesan text, berbeda dengan super class tanaman 
+                                                // dan sub class mawar,sub class putrimalu,sub class anggrek
+   
+    }
+    
+}
+
+ (METHOD) 
+
+public class namaTanaman { // SUPER CLASS
+    public static void main(String [] args){ // Program utama yang akan dijalani
+        Mawar TanamanMawar = new Mawar(); // membuat objek
+        PutriMalu TanamanPutriMalu = new PutriMalu(); // membuat objek
+        Anggrek TanamanAnggrek = new Anggrek(); // membuat objek
+        Melati TanamanMelati = new Melati(); // membuat objek
+        
+        Tanaman t;// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        System.out.println("Mawar"); // menampilkan pesan text tanamanmawar  
+        t = TanamanMawar; // memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.nama(); // memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.warna(); // memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        
+
+        System.out.println("Anggrek"); // menampilkan pesan text tanamananggrek
+        t = TanamanAnggrek;// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.nama();// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.warna();// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        
+
+        System.out.println("PutriMalu");// menampilkan pesan text tanamanan putrimalu
+        t = TanamanPutriMalu;// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.nama();// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.warna();// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        
+
+        System.out.println("Melati");// menampilkan pesan text tanaman melati
+        t = TanamanMelati;// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.nama();// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        t.warna();// memanggil objek dengan method yang sama namun dengan hasil yang berbeda
+        
+    }
+
+}
+
+Sekian yang dapat saya sampaikan tentang polymorphism, kurang dan lebihnya mohon maaf, karena disini saya 
+masih dalam tahap pembelajaran.
+
+
+
+
+
